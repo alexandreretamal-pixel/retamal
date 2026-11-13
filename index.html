@@ -130,13 +130,13 @@
     align-items:flex-start;
     flex-wrap:wrap;
     gap:30px;
-    margin:45px 0;
+    margin:45px auto 20px;
   ">
 
-    <!-- Première de couverture -->
+    <!-- Première de couverture : accès au sommaire -->
     <a href="msqs.html"
-       aria-label="Accéder à l'œuvre MSQS et à son sommaire"
-       style="display:block; width:100%; max-width:280px; text-decoration:none; color:#243047;">
+       aria-label="Accéder à MSQS et à son sommaire"
+       style="display:block; width:100%; max-width:280px;">
 
       <img
         src="0.%20Couverture%20MSQS.png"
@@ -148,23 +148,12 @@
           box-shadow:0 10px 30px rgba(0,0,0,0.15);
         "
       >
-
-      <span style="display:block; margin-top:20px; text-align:center; font-size:22px;">
-        MSQS
-      </span>
-
-      <span style="display:block; margin-top:8px; text-align:center; font-size:14px; color:#8c7961;">
-        Le Mécanisme de Stabilisation de la Quête de Sens
-      </span>
-
     </a>
 
-    <!-- Quatrième de couverture -->
-    <a href="MSQS%20-%204%20de%20couverture.png"
-       target="_blank"
-       rel="noopener"
-       aria-label="Lire la quatrième de couverture de MSQS en grand"
-       style="display:block; width:100%; max-width:280px; text-decoration:none; color:#243047;">
+    <!-- Quatrième de couverture : agrandissement sur place -->
+    <a href="#msqs-quatrieme"
+       aria-label="Agrandir la quatrième de couverture de MSQS"
+       style="display:block; width:100%; max-width:280px;">
 
       <img
         src="MSQS%20-%204%20de%20couverture.png"
@@ -176,18 +165,92 @@
           box-shadow:0 10px 30px rgba(0,0,0,0.15);
         "
       >
+    </a>
 
-      <span style="display:block; margin-top:20px; text-align:center; font-size:16px;">
-        Quatrième de couverture
+  </div>
+
+  <!-- Titre commun aux deux couvertures -->
+  <div style="text-align:center; margin-bottom:50px;">
+
+    <a href="msqs.html"
+       style="color:#243047; text-decoration:none;">
+
+      <span style="display:block; font-size:24px;">
+        MSQS
       </span>
 
-      <span style="display:block; margin-top:8px; text-align:center; font-size:14px; color:#8c7961;">
-        Cliquer pour agrandir et lire
+      <span style="
+        display:block;
+        margin-top:8px;
+        font-size:15px;
+        color:#8c7961;
+      ">
+        Le Mécanisme de Stabilisation de la Quête de Sens
       </span>
 
     </a>
 
   </div>
+
+  <!-- Affichage agrandi de la quatrième de couverture -->
+  <div id="msqs-quatrieme" class="msqs-agrandissement">
+
+    <a href="#essais"
+       class="msqs-fermer"
+       aria-label="Fermer la quatrième de couverture">
+      × Fermer
+    </a>
+
+    <img
+      src="MSQS%20-%204%20de%20couverture.png"
+      alt="Quatrième de couverture de MSQS agrandie"
+    >
+
+  </div>
+
+  <style>
+    .msqs-agrandissement {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(10, 18, 32, 0.96);
+      padding: 70px 20px 30px;
+      overflow-y: auto;
+      text-align: center;
+    }
+
+    .msqs-agrandissement:target {
+      display: block;
+    }
+
+    .msqs-agrandissement img {
+      display: block;
+      width: 100%;
+      max-width: 850px;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    .msqs-fermer {
+      position: fixed;
+      top: 15px;
+      right: 25px;
+      z-index: 1001;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      text-decoration: none;
+      background: #243047;
+      padding: 10px 18px;
+      border-radius: 5px;
+    }
+
+    .msqs-fermer:hover {
+      background: #465675;
+    }
+  </style>
+
 </section>
 
     <section id="articles">
