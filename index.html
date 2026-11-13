@@ -112,7 +112,7 @@
   <h1>
   <span class="logo-reveal">
     <img
-      src="Logo%20-%20AR%20-%20detoure.png"
+      src="Logo%20-%20AR%20-%20detoure-v2.png"
       alt="Alexandre Retamal"
       style="display:block; width:100%; height:auto;"
     >
@@ -194,11 +194,38 @@
 </style>
      <div class="subtitle subtitle-reveal">Essais, articles et réflexions</div>
 
-      <p class="intro-text">
-        Un espace personnel consacré à l'écriture, à l'analyse
-        et à la réflexion, ouvert à la diversité des idées
-        et des sujets.
-      </p>
+     <p class="intro-text" id="intro-typewriter">Un espace personnel consacré à l'écriture, à l'analyse et à la réflexion, ouvert à la diversité des idées et des sujets.</p>
+      <script>
+  (() => {
+    const element = document.getElementById("intro-typewriter");
+    if (!element) return;
+
+    const texte = element.textContent;
+    const delai = 4000;
+    const vitesse = 45;
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    element.textContent = "";
+    element.style.minHeight = "3em";
+
+    setTimeout(() => {
+      let position = 0;
+
+      const timer = setInterval(() => {
+        position = Math.min(position + 1, texte.length);
+        element.textContent = texte.slice(0, position);
+
+        if (position === texte.length) {
+          clearInterval(timer);
+          element.style.minHeight = "";
+        }
+      }, 1000 / vitesse);
+    }, delai);
+  })();
+</script>
     </div>
 
    <section id="essais">
