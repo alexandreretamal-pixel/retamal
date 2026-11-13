@@ -109,9 +109,67 @@
   <main id="accueil">
 
     <div class="introduction">
-      <h1>
-  <img src="Logo%20-%20AR%20-%20detoure.png" alt="Alexandre Retamal" style="display:block; width:100%; max-width:600px; height:auto; margin:0 auto;">
+  <h1>
+  <span class="logo-reveal">
+    <img
+      src="Logo%20-%20AR%20-%20detoure.png"
+      alt="Alexandre Retamal"
+      style="display:block; width:100%; height:auto;"
+    >
+  </span>
 </h1>
+
+<style>
+  .logo-reveal {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+
+    -webkit-mask-image: linear-gradient(
+      to right,
+      black 0%,
+      black 45%,
+      transparent 55%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      black 0%,
+      black 45%,
+      transparent 55%,
+      transparent 100%
+    );
+
+    -webkit-mask-size: 220% 100%;
+    mask-size: 220% 100%;
+
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+
+    animation: apparition-logo 5s ease-in-out forwards;
+  }
+
+  @keyframes apparition-logo {
+    from {
+      -webkit-mask-position: 100% 0;
+      mask-position: 100% 0;
+    }
+
+    to {
+      -webkit-mask-position: 0% 0;
+      mask-position: 0% 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .logo-reveal {
+      animation: none;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+  }
+</style>
       <div class="subtitle">Essais, articles et réflexions</div>
 
       <p class="intro-text">
