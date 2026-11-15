@@ -393,9 +393,27 @@
 
   </main>
 
-  <footer>
-    © Alexandre Retamal
-  </footer>
+ <footer>
+  © Alexandre Retamal — Tous droits réservés.
+  <br>
+  <small>
+    Les textes et créations originales publiés sur ce site
+    sont protégés par le droit d'auteur.
+    Toute reproduction ou réutilisation est soumise
+    aux dispositions légales applicables.
+  </small>
+</footer>
 
+<!-- Protection des contenus contre la copie ordinaire -->
+<script>
+document.addEventListener("copy", function (event) {
+    event.preventDefault();
+});
+
+document.addEventListener("contextmenu", function (event) {
+    event.preventDefault();
+});
+</script>
+  
 </body>
 </html>
